@@ -1,14 +1,57 @@
-.libraryContainer{
+.header {
   width: 100%;
-  height: 100vh;
+  height: 10vh;
+  border: 2px solid black;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  
+  flex-direction: row;
 }
 
-table{
+.headerTitle {
+  border: 2px solid black;
+  width: 50%;
+}
+
+.headerLogo {
+  border: 2px solid black;
+  width: 50%;
+}
+
+.libraryContainer {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+
+}
+
+.libraryTitle {
+  width: 100%;
+  height: 10%;
+  border: 2px solid black;
+}
+
+.bookShelf {
+  width: 100%;
+  height: 90%;
+  border: 2px solid black;
+}
+
+
+
+/* table{
+  border-collapse: collapse;
   border: 1px solid black;
   width: 80%;
   height: 60%;
+  table-layout: fixed;
 }
+
+td, th {
+  border: 1px solid #999;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  text-align: center;
+} */
