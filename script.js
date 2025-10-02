@@ -40,5 +40,12 @@ closeModalbtn.addEventListener('click', () => {
 })
 
 addBookBtn.addEventListener('click', () => {
-  // addBookToLibrary()
+  const title = document.getElementById('bookTitle').value;
+  // do for each element ie author pages etc
+  addBookToLibrary(title, author, pages, read)
+
+  myModal.close();
+  // for closing modal after clicking the add book button. we need a function that 
+  // checks if values are in place(filled out) 
+  // and doesnt close/ alerts to fill out all fields 
 })
