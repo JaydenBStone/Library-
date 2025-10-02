@@ -1,3 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f7f7f7;
+  color: #111;
+}
+
 .header {
   width: 100%;
   height: 10vh;
@@ -18,7 +29,7 @@
 
 .libraryContainer {
   width: 100%;
-  height: 85vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,25 +44,44 @@
   border: 2px solid black;
 }
 
-.bookShelf {
+.bookShelfContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 90%;
   border: 2px solid black;
 }
 
-
-
-/* table{
-  border-collapse: collapse;
-  border: 1px solid black;
-  width: 80%;
-  height: 60%;
-  table-layout: fixed;
+.bookShelfHeader {
+  width: 100%;
+  height: 20%;
+  border: 2px solid black;
+  background-color: lightcyan;
 }
 
-td, th {
-  border: 1px solid #999;
-  box-sizing: border-box;
-  padding: 0.5rem;
-  text-align: center;
-} */
+.bookShelf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  border: 2px solid black;
+  padding: 20px 0px;
+}
+
+.book {
+  width: 75%;
+  height: 10%;
+  border: 2px solid black;
+  background-color: gray;
+  margin: 5px;
+}
+
+.modalContent{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

@@ -1,4 +1,5 @@
 const Library = [];
+const shelf = document.querySelector('.bookShelf');
 
 function Book(title, author, pages, read) {
 
@@ -15,12 +16,29 @@ function Book(title, author, pages, read) {
 
 function addBookToLibrary(title, author, pages, read) {
   const newBook = new Book(title, author, pages, read);
-  Library.push(newBook); 
+  Library.push(newBook);
+  addBook(newBook);
 }
 
-addBookToLibrary('jayden', 'dsad', 135, true)
-addBookToLibrary('stone', 'dsawqed', 185, false)
+function addBook(book) {
+  const bookDiv = document.createElement('div');
+  bookDiv.classList.add('book');
+  bookDiv.textContent = `${book.title} by ${book.author}`;
+  shelf.appendChild(bookDiv);
+}
 
+const myModal = document.getElementById('myModal');
+const openModalBtn = document.getElementById('openModal');
+const addBookBtn = document.getElementById('addBook');
+const closeModalbtn = document.getElementById('closeModal');
 
+openModalBtn.addEventListener('click', () => {
+  myModal.showModal();
+})
+closeModalbtn.addEventListener('click', () => {
+  myModal.close();
+})
 
-
+addBookBtn.addEventListener('click', () => {
+  // addBookToLibrary()
+})
